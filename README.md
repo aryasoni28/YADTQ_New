@@ -56,11 +56,13 @@ Make sure Kafka and Redis are running:
 
 # Start Redis
 `redis-server`
+
 2. Run Workers
 Start worker processes to handle tasks:
 
 `python workercode.py`
 This will start 3 worker threads that can process tasks.
+
 
 3. Submit Tasks
 Run the client to submit tasks:
