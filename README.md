@@ -201,3 +201,12 @@ Task not processed: Check that workers are running and connected
 
 Logging
 Both client and worker components output logs with timestamps for debugging.
+
+
+System design:
+<img width="900" height="713" alt="image" src="https://github.com/user-attachments/assets/0aee2c0d-cb21-4444-b25e-b1fe3c81534f" />
+
+Architecture:
+<img width="893" height="865" alt="image" src="https://github.com/user-attachments/assets/00d274c2-e59f-4edb-9c9d-a3e0da5c99b8" />
+
+
