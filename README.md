@@ -164,18 +164,31 @@ Division by zero errors are caught and handled gracefully
 Network issues with Kafka or Redis are handled with retries
 
 File Structure
+
 text
+
 yadtq/
+
 ├── api/                 # Client and worker APIs
+
 │   ├── yadtq_client.py # Task submission and result retrieval
+
 │   └── yadtq_worker.py # Worker implementation
+
 ├── core/               # Core components
+
 │   ├── yadtq_broker.py     # Kafka message broker
+
 │   ├── yadtq_result_db.py  # Redis result storage
+
 │   └── yadtq_task.py       # Task data structure
+
 ├── __init__.py         # Package initialization
+
 clientcode.py          # Example client
+
 workercode.py          # Example worker implementation
+
 Troubleshooting
 Common Issues
 Kafka connection errors: Ensure Kafka is running and accessible
@@ -186,21 +199,3 @@ Task not processed: Check that workers are running and connected
 
 Logging
 Both client and worker components output logs with timestamps for debugging.
-
-Limitations
-Currently uses a single Kafka topic for all tasks
-
-No priority-based task processing
-
-No task scheduling (only immediate execution)
-
-Future Enhancements
-Task prioritization
-
-Scheduled tasks
-
-Multiple queues for different task types
-
-Web-based monitoring dashboard
-
-Authentication and authorization
