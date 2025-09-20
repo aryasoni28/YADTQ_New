@@ -47,7 +47,7 @@ Usage
 Make sure Kafka and Redis are running:
 
 bash
-# Start Zookeeper (if needed)
+# Start Zookeeper
 zookeeper-server-start.sh config/zookeeper.properties
 
 # Start Kafka
