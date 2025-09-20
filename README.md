@@ -18,7 +18,7 @@ Automatic retry mechanism for failed tasks
 Worker heartbeat monitoring
 
 Architecture
-text
+
 Client -> Submit Task -> Kafka Broker -> Workers -> Process Task -> Store Results in Redis
 Components
 Client: Submits tasks and checks results
@@ -40,33 +40,33 @@ Redis (running on localhost:6379 by default)
 Dependencies
 Install required Python packages:
 
-bash
+`
 pip install kafka-python redis
+`
 Usage
 1. Start the Infrastructure
 Make sure Kafka and Redis are running:
 
-bash
+
 # Start Zookeeper
-zookeeper-server-start.sh config/zookeeper.properties
+`zookeeper-server-start.sh config/zookeeper.properties`
 
 # Start Kafka
-kafka-server-start.sh config/server.properties
+`kafka-server-start.sh config/server.properties`
 
 # Start Redis
-redis-server
+`redis-server`
 2. Run Workers
 Start worker processes to handle tasks:
 
-bash
-python workercode.py
+`python workercode.py`
 This will start 3 worker threads that can process tasks.
 
 3. Submit Tasks
 Run the client to submit tasks:
 
-bash
-python clientcode.py
+
+`python clientcode.py`
 The client will submit tasks and periodically check their status until all are completed.
 
 Configuration
